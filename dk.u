@@ -34,5 +34,5 @@
 
   % unified.asset { name="Krb5Config", file="assets/krb5-config-1.22.2" }
   'asset'
-  '7096'
-  { 'sha256:8613d8d8420464d6dd522d754c90ee178c452db19546ea67ab94993b2358b20e', 'sha1:eecad1a7580c9cc4802342f00578ebb66cf3f78d' }
+  '6831'
+  'sha256:8613d8d8420464d6dd522d754c90ee178c452db19546ea67ab94993b2358b20e'
