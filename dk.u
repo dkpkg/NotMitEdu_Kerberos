@@ -1,0 +1,38 @@
+# NotMitEdu_Kerberos
+## workspace
+
+  %% import { type="github-l2", repo="dkpkg/CommonsBase_Std" }
+  'import'
+  'github-l2'
+  { { 'CommonsBase_Std', '2.5.202605230053', {
+      'blake2b-256:45d0f9a049ef179b55e4a4b1adc426d8bcbdaaf8901d9d78b0315b9388f89d3c',
+      'sha256:7f0e42ea1894c4f7108d0c028df48fdd63d528ded76b9b3e195e08f7306d2a67',
+      'sha1:a3d27aedec716fedfd8837f7d4fac419ccd5771e'
+    } } }
+
+  %% import { type="github-l2", repo="dkpkg/CommonsBase_GNU" }
+  'import'
+  'github-l2'
+  { { 'CommonsBase_GNU', '2.5.202605232350', {
+      'blake2b-256:249d69db404be66d93bb852b547f22b8495140fdbad2065a004602289304c65d',
+      'sha256:39a97f4eed3b3c6e28c495eeaa2651546011e924de09746f5d2ec085e733e320',
+      'sha1:efcd58eb784dc91c2e2e088108ee9ed8b5805e43'
+    } } }
+
+  %% import { type="github-l2", repo="dkpkg/CommonsBase_FileMagic" }
+  'import'
+  'github-l2'
+  { { 'CommonsBase_FileMagic', '2.5.202605231534', {
+      'blake2b-256:322a0d0b6e1cecc372b83661cad64f80fb4715034edfd65743e99fd4eae9303d',
+      'sha256:b4396a0f317c60890e582ea397496ea579af25c7ca2288895ea1816b32a75205',
+      'sha1:184804b876bc7115b394e8a96bbfe8bebf784577'
+    } } }
+
+## Assets
+
+### NotMitEdu_Kerberos.Lookup.Apparatus@1.0.0
+
+  % unified.asset { name="Krb5Config", file="assets/krb5-config-1.22.2" }
+  'asset'
+  '7096'
+  { 'sha256:4953fb2cc1518e56b614e04e5597cab99e07a501592be9f121e41eaefe8f27dd', 'sha1:cafa85eaf5489abccfc82eeadd628f210faffb08' }

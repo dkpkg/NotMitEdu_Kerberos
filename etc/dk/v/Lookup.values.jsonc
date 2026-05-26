@@ -1,0 +1,30 @@
+// Test: ./dk0 --autofix -I etc/dk/v -x commons-base-win32-table:subpath: --trust-local-package NotMitEdu_Kerberos get-bundle NotMitEdu_Kerberos.Lookup@1.0.0 -d target/krblookup
+{
+  "$schema": "https://github.com/diskuv/dk/raw/refs/heads/V2_5/etc/jsonschema/dk-values.json",
+  "schema_version": { "major": 1, "minor": 0 },
+  "bundles": [
+    {
+      "id": "NotMitEdu_Kerberos.Lookup@1.0.0",
+      "listing": {
+        "origins": [
+          {
+            "name": "not-mit-edu-kerberos",
+            "mirrors": [
+              "cell://root"
+            ]
+          }
+        ]
+      },
+      "assets": [
+        {
+          "path": "assets/krb5-config-1.22.2",
+          "origin": "not-mit-edu-kerberos",
+          "size": 7096,
+          "checksum": {
+            "sha256": "4953fb2cc1518e56b614e04e5597cab99e07a501592be9f121e41eaefe8f27dd"
+          }
+        }
+      ]
+    }
+  ]
+}

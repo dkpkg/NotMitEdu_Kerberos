@@ -1,0 +1,8 @@
+# Distribution for Linux arm64 NotMitEdu_Kerberos
+
+## Objects and assets
+
+  $ get-object NotMitEdu_Kerberos.V5@1.22.2 -s Release.Linux_arm64 -d ${RUNTIME}/Linux_arm64-V5-1.22.2
+
+  $ run-object CommonsBase_FileMagic.File@7.8.50407 -s Release.execution_abi -m ./bin/file.exe -e bin/file.exe --
+  >   -b $(get-object NotMitEdu_Kerberos.V5@1.22.2 -s Release.Linux_arm64 -d : -e bin/kinit)/bin/kinit
