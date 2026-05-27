@@ -4,7 +4,7 @@
 
   $ get-object NotMitEdu_Kerberos.V5@1.22.2 -s Release.Darwin_x86_64 -d ${RUNTIME}/Darwin_x86_64-V5-1.22.2
   \test(pass)
-  \dk.object(abi: "Release.Darwin_x86_64", value-id: "o4lrgethguiw7fj6nb3peuf5xcocumzj5lpon4bjv3h3wj57dlkzq")\;
+  \dk.object(abi: "Release.Darwin_x86_64", value-id: "ocrcedhg7xyrku2e2c3g224jg3syiii7r6ub2a2ewh6b3iuvgdvaa")\;
 
   $ run-object CommonsBase_FileMagic.File@7.8.50407 -s Release.execution_abi -m ./bin/file.exe -e bin/file.exe --
   >   -b $(get-object NotMitEdu_Kerberos.V5@1.22.2 -s Release.Darwin_x86_64 -d : -e bin/kinit)/bin/kinit
