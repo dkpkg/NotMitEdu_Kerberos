@@ -1,0 +1,13 @@
+# Distribution for Linux x86 NotMitEdu_Kerberos
+
+## Objects and assets
+
+  $ get-object NotMitEdu_Kerberos.V5@1.22.2 -s Release.Linux_x86 -d ${RUNTIME}/Linux_x86-V5-1.22.2
+  \test(pass)
+  \dk.object(abi: "Release.Linux_x86", value-id: "of2dc5dpsiw7fhxzehnrcvf7pru35ambdzvom6qiulul5hjqgvina")\;
+
+  $ run-object CommonsBase_FileMagic.File@7.8.50407 -s Release.execution_abi -m ./bin/file.exe -e bin/file.exe --
+  >   -b $(get-object NotMitEdu_Kerberos.V5@1.22.2 -s Release.Linux_x86 -d : -e bin/kinit)/bin/kinit
+  \test(pass)
+  \dk.target(abi: "Linux_x86")[ELF 32-bit LSB executable, Intel i386, version 1 (SYSV)
+  ]\;

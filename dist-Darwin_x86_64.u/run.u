@@ -1,0 +1,13 @@
+# Distribution for Darwin x86_64 NotMitEdu_Kerberos
+
+## Objects and assets
+
+  $ get-object NotMitEdu_Kerberos.V5@1.22.2 -s Release.Darwin_x86_64 -d ${RUNTIME}/Darwin_x86_64-V5-1.22.2
+  \test(pass)
+  \dk.object(abi: "Release.Darwin_x86_64", value-id: "oaftwexhpgrusztdg6cdede6c3vaojupuozn5dzdhcydvc7w6emsq")\;
+
+  $ run-object CommonsBase_FileMagic.File@7.8.50407 -s Release.execution_abi -m ./bin/file.exe -e bin/file.exe --
+  >   -b $(get-object NotMitEdu_Kerberos.V5@1.22.2 -s Release.Darwin_x86_64 -d : -e bin/kinit)/bin/kinit
+  \test(pass)
+  \dk.target(abi: "Darwin_x86_64")[Mach-O 64-bit executable, flags:<NOUNDEFS|DYLDLINK|TWOLEVEL|PIE>
+  ]\;
