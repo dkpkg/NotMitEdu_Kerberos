@@ -1,7 +1,7 @@
 on:
   push:
     tags:
-      - '2.5.0-*' # package-native prerelease tags still use the 2.5 distribution keys
+      - '2.5.*' # secrets are tied to version 2.5
   workflow_dispatch: # allow manual triggering from GitHub page
 
 jobs:
