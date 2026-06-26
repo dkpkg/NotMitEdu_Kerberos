@@ -23,7 +23,7 @@ jobs:
             distscript: dist-Linux_x86_64.u
             image: quay.io/pypa/manylinux_2_28_x86_64:2026.04.08-5
             target-abi: Linux_x86_64
-          # Temporarily disable Linux arm64: dk-distribute@v2 downloads dk0 from
+          # Temporarily disable Linux arm64: dk-distribute@v3 downloads dk0 from
           # diskuv/dk V2_5, whose bootstrap script only supports darwin_arm64,
           # darwin_x86_64, linux_x86_64 and linux_x86 and fails on arm runners
           # with "FATAL: There is no support for linux_arm64". Re-enable after
@@ -78,13 +78,13 @@ jobs:
         run: dnf install -y glibc-devel.i686 libgcc.i686 libstdc++.i686 gcc-toolset-14-libstdc++-devel.i686
 
       - name: Distribute Modules
-        uses: diskuv/dk-distribute@v2
+        uses: diskuv/dk-distribute@v3
         with:
             id: ${{ steps.dk_id.outputs.value }}
             pubkey: ${{ secrets.distribute_2_5_pubkey }}
             seckey: ${{ secrets.distribute_2_5_seckey }}
             options: -nosysinc
-            use-cache: true
+            store: none
             distscript: ${{ matrix.distscript }}
             execution-abi: ${{ matrix.execution-abi }}
             target-abi: ${{ matrix.target-abi }}
@@ -108,7 +108,7 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Combine Modules
-        uses: diskuv/dk-distribute/combine@v2
+        uses: diskuv/dk-distribute/combine@v3
 
       - name: Attest
         id: attest
