@@ -13,6 +13,7 @@
                     {
                         "name": "mit-krb5",
                         "mirrors": [
+                            "https://github.com/dkpkg/NotMitEdu_Kerberos/releases/download/krb5-1.22.2",
                             "https://kerberos.org/dist/krb5/1.22"
                         ]
                     }
