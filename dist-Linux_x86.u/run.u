@@ -4,7 +4,7 @@
 
   $ get-object NotMitEdu_Kerberos.V5@1.22.2 -s Release.Linux_x86 -d ${RUNTIME}/Linux_x86-V5-1.22.2
   \test(pass)
-  \dk.object(abi: "Release.Linux_x86", value-id: "of2dc5dpsiw7fhxzehnrcvf7pru35ambdzvom6qiulul5hjqgvina")\;
+  \dk.object(abi: "Release.Linux_x86", value-id: "opaoa6urgwhjfjymsezpscbw2wyhougxekpye35l6d5sqvseryz4q")\;
 
   $ run-object CommonsBase_FileMagic.File@7.8.50407 -s Release.execution_abi -m ./bin/file.exe -e bin/file.exe --
   >   -b $(get-object NotMitEdu_Kerberos.V5@1.22.2 -s Release.Linux_x86 -d : -e bin/kinit)/bin/kinit
