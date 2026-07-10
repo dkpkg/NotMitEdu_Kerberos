@@ -1,7 +1,7 @@
 on:
   push:
     tags:
-      - '2.5.*' # secrets are tied to version 2.5
+      - '0.1.*' # secrets are tied to version 0.1
   workflow_dispatch: # allow manual triggering from GitHub page
 
 jobs:
@@ -13,14 +13,14 @@ jobs:
       matrix:
         include:
             # curl and build-essential are part of ubuntu-24.04 CI runner, so test with:
-            #   docker run -v .:/work --workdir /work -it ubuntu:24.04 bash -c "apt update && apt install -y curl build-essential && sh ./dk0 distribute --actual-in-place --library NotMitEdu_Kerberos@2.5.99 part1 dist-Linux_x86_64.u"
-            #   docker run -v .:/work --workdir /work -it quay.io/pypa/manylinux_2_28_x86_64:2026.04.08-5 sh ./dk0 distribute --actual-in-place --library NotMitEdu_Kerberos@2.5.99 part1 dist-Linux_x86_64.u
+            #   docker run -v .:/work --workdir /work -it ubuntu:24.04 bash -c "apt update && apt install -y curl build-essential && sh ./dk0 distribute --actual-in-place --library NotMitEdu_Kerberos@0.1.99 part1 dist-Linux_x86_64.u"
+            #   docker run -v .:/work --workdir /work -it quay.io/pypa/manylinux_2_28_x86_64:2026.04.08-5 sh ./dk0 distribute --actual-in-place --library NotMitEdu_Kerberos@0.1.99 part1 dist-Linux_x86_64.u
           - runs-on: ubuntu-latest
-            distscript: dist-Linux_x86.u
+            distscript: dist/Linux_x86.u
             image: quay.io/pypa/manylinux_2_28_x86_64:2026.04.08-5 # use 64-bit host to install 32-bit multilib dependencies
             target-abi: Linux_x86
           - runs-on: ubuntu-latest
-            distscript: dist-Linux_x86_64.u
+            distscript: dist/Linux_x86_64.u
             image: quay.io/pypa/manylinux_2_28_x86_64:2026.04.08-5
             target-abi: Linux_x86_64
           # Temporarily disable Linux arm64: dk-distribute@v3 downloads dk0 from
@@ -29,15 +29,15 @@ jobs:
           # with "FATAL: There is no support for linux_arm64". Re-enable after
           # upstream dk0/dk-distribute gains documented Linux arm64 host support.
           # - runs-on: ubuntu-24.04-arm
-          #   distscript: dist-Linux_arm64.u
+          #   distscript: dist/Linux_arm64.u
           #   image: quay.io/pypa/manylinux_2_28_aarch64:2026.04.08-5
           #   execution-abi: Linux_arm64
           #   target-abi: Linux_arm64
           - runs-on: macos-latest
-            distscript: dist-Darwin_arm64.u
+            distscript: dist/Darwin_arm64.u
             execution-abi: Darwin_arm64
           - runs-on: macos-latest
-            distscript: dist-Darwin_x86_64.u
+            distscript: dist/Darwin_x86_64.u
             execution-abi: Darwin_arm64
             target-abi: Darwin_x86_64
 
@@ -74,21 +74,20 @@ jobs:
           echo "value=NotMitEdu_Kerberos@${dk_version}" >> "$GITHUB_OUTPUT"
 
       - name: Prepare Linux_x86 multilib toolchain
-        if: ${{ matrix.distscript == 'dist-Linux_x86.u' }}
+        if: ${{ matrix.distscript == 'dist/Linux_x86.u' }}
         run: dnf install -y glibc-devel.i686 libgcc.i686 libstdc++.i686 gcc-toolset-14-libstdc++-devel.i686
 
       - name: Distribute Modules
         uses: diskuv/dk-distribute@v3
         with:
             id: ${{ steps.dk_id.outputs.value }}
-            pubkey: ${{ secrets.distribute_2_5_pubkey }}
-            seckey: ${{ secrets.distribute_2_5_seckey }}
+            pubkey: ${{ secrets.distribute_0_1_pubkey }}
+            seckey: ${{ secrets.distribute_0_1_seckey }}
             options: -nosysinc
             store: release
             distscript: ${{ matrix.distscript }}
             execution-abi: ${{ matrix.execution-abi }}
             target-abi: ${{ matrix.target-abi }}
-            experimental-dk-owner: ${{ github.repository_owner == 'dkpkg' && 'diskuv' || github.repository_owner }}
             experimental-mlfront-ref: ${{ github.ref_type != 'tag' && 'HEAD' }}
 
   combine:
