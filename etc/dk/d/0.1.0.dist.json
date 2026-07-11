@@ -1,0 +1,32 @@
+{
+  "continuations": {
+    "attestation": {
+      "openbsd_signify": {
+        "signature": "untrusted comment: signed by key d1d582038a8d2bfd\nRWTR1YIDio0r/YHWAKIVVXE5YuBxyytqPViBolm2A4KNK5a2XVm9xLW/ze0DZFWTkWdGKT9Vis+OTOU0gNtnJ5SOX7eRq+UNVgs=\n"
+      }
+    },
+    "continuations_to_sign": {
+      "0.2": {
+        "application": { "name": "dk0", "version": "2.4.2+rev-253" },
+        "openbsd_signify": {
+          "public_key": "untrusted comment: NotMitEdu_Kerberos-0.2\nRWQCgN5IJ8NAqWCF8WKWBE64PPXUQw3fPO7IXuzf/fD/0I1ZXJE9dyoH\n"
+        }
+      },
+      "1.0": {
+        "application": { "name": "dk0", "version": "2.4.2+rev-253" },
+        "openbsd_signify": {
+          "public_key": "untrusted comment: NotMitEdu_Kerberos-1.0\nRWSex7P1GrTr3KSXlllPGOd0OKj8kJmTeKwT7QaWHNBp6T0ZZKYPD/vA\n"
+        }
+      }
+    }
+  },
+  "id": "NotMitEdu_Kerberos@0.1.0",
+  "license": { "spdx": "Apache-2.0" },
+  "producer": {
+    "application": { "name": "dk0", "version": "2.4.2+rev-253" },
+    "github_slsa_v1_l2": { "repository": "dkpkg/NotMitEdu_Kerberos" },
+    "openbsd_signify": {
+      "public_key": "untrusted comment: NotMitEdu_Kerberos-0.1\nRWTR1YIDio0r/fZB7fyhjfkigCKAudKoN+aRmE1XffQINteJWO8H9XfT\n"
+    }
+  }
+}

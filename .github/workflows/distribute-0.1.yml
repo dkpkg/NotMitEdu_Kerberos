@@ -60,15 +60,15 @@ jobs:
 
           if [ "${{ github.ref_type }}" = "tag" ]; then
             case "$ref_name" in
-              2.5.0-*) dk_version="2.5.${ref_name#2.5.0-}" ;;
-              2.5.*) dk_version="$ref_name" ;;
+              0.1.0-*) dk_version="0.1.${ref_name#0.1.0-}" ;;
+              0.1.*) dk_version="$ref_name" ;;
               *)
-                echo "::error title=⛔ error hint::Unsupported tag '$ref_name'. Use a package-native prerelease tag like 2.5.0-20260526195500."
+                echo "::error title=⛔ error hint::Unsupported tag '$ref_name'. Use a package-native prerelease tag like 0.1.0-20260526195500."
                 exit 1
                 ;;
             esac
           else
-            dk_version="2.5.${{ github.run_id }}"
+            dk_version="0.1.${{ github.run_id }}"
           fi
 
           echo "value=NotMitEdu_Kerberos@${dk_version}" >> "$GITHUB_OUTPUT"
