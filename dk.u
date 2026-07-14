@@ -1,5 +1,6 @@
 # NotMitEdu_Kerberos
 ## workspace
+  %% actual_version("2.4.2.273")
 
   %% import { type="github-l2", repo="dkpkg/CommonsBase_Std" }
   'import'
