@@ -1,4 +1,41 @@
 # NotMitEdu_Kerberos
+
+## Overview
+
+Redistributes MIT Kerberos 5 (krb5) 1.22.2 — its shared libraries, headers, and client/admin tools — built as a dk package for macOS and Linux.
+
+`NotMitEdu_Kerberos` builds MIT Kerberos 5 release 1.22.2 from upstream
+source and redistributes the resulting shared libraries (`libkrb5`,
+`libgssapi_krb5`, `libk5crypto`, and friends), development headers, and
+client/admin executables such as `kinit`, `klist`, and `kadmin`, compiled
+for Darwin (arm64, x86_64) and Linux (x86_64, x86, arm64). The setuid
+`ksu` helper is deliberately excluded from the distribution.
+
+## License
+
+BSD-2-Clause AND BSD-3-Clause AND MIT AND ISC AND RSA-MD AND LicenseRef-MIT-Kerberos
+
+### LicenseRef-MIT-Kerberos
+
+Export of this software from the United States of America may
+require a specific license from the United States Government.
+It is the responsibility of any person or organization contemplating
+export to obtain such a license before exporting.
+
+WITHIN THAT CONSTRAINT, permission to use, copy, modify, and
+distribute this software and its documentation for any purpose and
+without fee is hereby granted, provided that the above copyright
+notice appear in all copies and that both that copyright notice and
+this permission notice appear in supporting documentation, and that
+the name of M.I.T. not be used in advertising or publicity pertaining
+to distribution of the software without specific, written prior
+permission.  Furthermore if you modify this software you must label
+your software as modified software and not distribute it in such a
+fashion that it might be confused with the original M.I.T. software.
+M.I.T. makes no representations about the suitability of
+this software for any purpose.  It is provided "as is" without express
+or implied warranty.
+
 ## workspace
   %% actual_version("2.4.2.279")
 
