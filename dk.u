@@ -2,7 +2,7 @@
 
 ## Overview
 
-Redistributes MIT Kerberos 5 (krb5) 1.22.2 — its shared libraries, headers, and client/admin tools — built as a dk package for macOS and Linux.
+Redistributes MIT Kerberos 5 (krb5) 1.22.2 (its shared libraries, headers, and client/admin tools) built as a dk package for macOS and Linux.
 
 `NotMitEdu_Kerberos` builds MIT Kerberos 5 release 1.22.2 from upstream
 source and redistributes the resulting shared libraries (`libkrb5`,
