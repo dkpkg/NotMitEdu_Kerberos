@@ -43,24 +43,24 @@ or implied warranty.
 
   %% import { type="github-l2", repo="dkpkg/CommonsBase_Std" }
   \dk.import(type: "github-l2", library: "CommonsBase_Std",
-    version: "2.6.20260907152615",
-    checksum: (blake2b-256: "d5e12d112d6d7338b911a4df61a8eb826fcba894536bb483a6d33f5ecf6af7e0",
-      sha256: "79d7b1456fa32c026a0767c3697fd340aaec58b53f362e7a0ebdc5a418bfc95c",
-      sha1: "739e7c96b79f0cdca981e9ccfbc2511700a9fcc1"))\;
+    version: "2.6.20260913085659",
+    checksum: (blake2b-256: "8d601ad9945d5aae4afaa980e922f6d7bcb32a4effd0e3c12d03bf6c3b98839d",
+      sha256: "25224920a4b704b3693afe5343ce05c5cd2c0d9e19ce1641511707fb5af59887",
+      sha1: "f7dab451a2d2860aff9bdff09530b6de464255aa"))\;
 
   %% import { type="github-l2", repo="dkpkg/CommonsBase_GNU" }
   \dk.import(type: "github-l2", library: "CommonsBase_GNU",
-    version: "0.1.20260909175841",
-    checksum: (blake2b-256: "39f4642ba19b02c0b9e9355bbf51a89fbe5f8dbb1e2e0aff73f64deebca7bfa7",
-      sha256: "ba738de232fae84ab6555a0070306b23cb0a28b3b1f9dbeed6324ec1241e701d",
-      sha1: "4c42c1e32db4c417206c4650b09f90eb2735e27d"))\;
+    version: "0.1.20260913085659",
+    checksum: (blake2b-256: "eb84d4746b5c75ba21283c0b54f2cec8581d99185bfce016972198e1facfcf34",
+      sha256: "9500243faab7e00ea8c604e4b6ace72f8784587fcee453f3959304934d37c5d1",
+      sha1: "8da7deb3ace3080c5954958318bf1a91b16f2fb0"))\;
 
   %% import { type="github-l2", repo="dkpkg/CommonsBase_FileMagic" }
   \dk.import(type: "github-l2", library: "CommonsBase_FileMagic",
-    version: "0.1.20260907154822",
-    checksum: (blake2b-256: "171f31a94615c72d9e96a560e1333d512e349578c0cd9f34c49ad5e4a4ab590b",
-      sha256: "85d381d6da76af8671fa6a78c34d69ebe1e8e4ea4f6a6c9435e731d960b9f79d",
-      sha1: "b17329465e16a0f573d93024d495f32531679ece"))\;
+    version: "0.1.20260913085659",
+    checksum: (blake2b-256: "8ade258eab5b54a7f177a84e7d3615a30d59a1bcdb778a5692cd1d8d82563b45",
+      sha256: "ac662bb7e78faddf667b007df133157d9f588fb635e5edbfdccc830a8823abdb",
+      sha1: "01899d41f833c8d175bf39a013ca53a45dffe7b1"))\;
 
 ## Assets
 
